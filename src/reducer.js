@@ -1,4 +1,4 @@
-import {NEW_GAME, GUESS, TOGGLE_INFO_MODAL} from './actions';
+import {NEW_GAME, NEW_GUESS, TOGGLE_INFO_MODAL} from './actions';
 
 const initialState = {
     guesses: [],

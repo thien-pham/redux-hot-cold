@@ -6,9 +6,9 @@ export const newGame = (guesses, feedback, correctAnswer) => ({
     correctAnswer
 });
 
-export const GUESS = 'GUESS';
-export const guess = guess => ({
-    type: GUESS,
+export const NEW_GUESS = 'GUESS';
+export const newGuess = guess => ({
+    type: NEW_GUESS,
     guess
 });
 
