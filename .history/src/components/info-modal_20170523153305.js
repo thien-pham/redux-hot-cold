@@ -4,15 +4,8 @@ import {toggleInfoModal} from '../actions';
 import './info-modal.css';
 
 export class InfoModal extends React.Component {
-
-    constructor(props) {
-        super(props);
-        this.onClose = this.onClose.bind(this);
-    }
-
     onClose(event) {
         event.preventDefault();
-        console.log('Yolo');
         this.props.dispatch(toggleInfoModal());
     }
 
@@ -29,7 +22,9 @@ export class InfoModal extends React.Component {
                             <li>3. You will <strong>get feedback</strong> on how close ("hot") or far ("cold") your guess is.</li>
                         </ul>
                         <p>So, Are you ready?</p>
-                        <a className="close" href="#" onClick={this.onClose}>Got It!</a>
+                        <a className="close" href="#" onClick={ e =>
+                            console.log('Yolo');
+                            this.onClose(e)}>Got It!</a>
                     </div>
                 </div>
             </div>

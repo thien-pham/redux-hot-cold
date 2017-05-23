@@ -14,10 +14,10 @@ export class TopNav extends React.Component {
     onInfo(event) {
         event.preventDefault();
         console.log('testing');
-        //if (this.props.onInfo) {
+        if (this.props.onInfo) {
             // this.props.onInfo();
             this.props.dispatch(toggleInfoModal());
-        //}
+        }
     }
 
     render() {

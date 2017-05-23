@@ -1,12 +1,12 @@
 import React from 'react';
 import TopNav from './top-nav';
 import InfoModal from './info-modal';
-import { connect } from 'react-redux';
+
 import './header.css';
 // import {connect} from 'react-redux';
 import {toggleInfoModal} from '../actions';
 
-export function Header (props) {
+export default function Header (props) {
 
     // toggleInfoModal() {
     //     this.setState({
@@ -17,7 +17,7 @@ export function Header (props) {
     let infoModal;
     if (props.showInfoModal) {
     //     // showInfoModal = !this.state.showInfoModal;
-        infoModal = <InfoModal />;
+        infoModal = <InfoModal onClose={() => (toggleInfoModal())} />;
     }
 
     return (
@@ -30,8 +30,8 @@ export function Header (props) {
     );
 };
 
-const mapStateToProps = state => ({
-    showInfoModal: state.showInfoModal
-})
+// const mapStateToProps = state => ({
+//     showInfoModal: state.showInfoModal
+// })
 
-export default connect(mapStateToProps)(Header);
+// export default connect(mapStateToProps)(Header);

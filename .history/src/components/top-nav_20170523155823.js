@@ -14,10 +14,9 @@ export class TopNav extends React.Component {
     onInfo(event) {
         event.preventDefault();
         console.log('testing');
-        //if (this.props.onInfo) {
-            // this.props.onInfo();
-            this.props.dispatch(toggleInfoModal());
-        //}
+        if (this.props.onInfo) {
+            this.props.onInfo();
+        }
     }
 
     render() {
@@ -40,7 +39,7 @@ export class TopNav extends React.Component {
     }
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = ({
     showInfoModal: state.showInfoModal
 });
 
