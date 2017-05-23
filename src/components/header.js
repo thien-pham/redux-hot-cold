@@ -8,22 +8,15 @@ import {toggleInfoModal} from '../actions';
 
 export function Header (props) {
 
-    // toggleInfoModal() {
-    //     this.setState({
-    //         showInfoModal: !this.state.showInfoModal
-    //     });
-    // }
 
     let infoModal;
     if (props.showInfoModal) {
-    //     // showInfoModal = !this.state.showInfoModal;
         infoModal = <InfoModal />;
     }
 
     return (
         <header>
             <TopNav />
-                {/*// onNewGame={props.onNewGame} />*/}
             {infoModal}
             <h1>HOT or COLD</h1>
         </header>

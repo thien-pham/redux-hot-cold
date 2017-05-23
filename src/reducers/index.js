@@ -10,13 +10,11 @@ const initialState = {
 export const reducer = (state = initialState, action) => {
 
     if (action.type === NEW_GAME){
-        // const newState = {
-        // guesses: [],
-        // feedback: 'Make your guess!',
-        // correctAnswer: Math.round(Math.random() * 100)
-        // };
-        // return newState;
-        return initialState;
+        return Object.assign({}, state, {
+            guesses: [...state.guesses],
+            feedback: state.feedback,
+            correctAnswer: Math.round(Math.random() * 100)
+        });
     } else if (action.type === NEW_GUESS){
         return Object.assign({}, state, {
             guesses: [...state.guesses, action.guess],

@@ -1,8 +1,6 @@
 export const NEW_GAME = 'NEW_GAME';
-export const newGame = (guesses, feedback, correctAnswer) => ({
+export const newGame = (correctAnswer) => ({
     type: NEW_GAME,
-    guesses,
-    feedback,
     correctAnswer
 });
 
