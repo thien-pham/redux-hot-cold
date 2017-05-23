@@ -1,4 +1,4 @@
-import {createStore, applyMiddleware, compose } from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import {reducer} from './reducers';
 import { createLogger } from 'redux-logger';
 
@@ -7,6 +7,6 @@ const middlewares = [
 ];
 
 export default createStore(reducer, undefined,
-  compose(applyMiddleware(...middlewares),
+  compose(applyMiddleWare(...middlewares),
   window.devToolsExtension ? window.devToolsExtension() : f => f
 ));
