@@ -35,6 +35,7 @@ export class TopNav extends React.Component {
 };
 
 const mapStateToProps = state => ({
+    correctAnswer: state.correctAnswer,
     showInfoModal: state.showInfoModal
 });
 

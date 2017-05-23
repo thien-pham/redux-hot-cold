@@ -9,13 +9,13 @@ export class GuessForm extends React.Component {
         event.preventDefault();
         const value = this.input.value;
         this.props.dispatch(newGuess(value));
-        this.input.value = '';
+
     }
     render() {
         return (
             <form onSubmit={e =>
-                this.onGuess(e)}
-            >
+                this.onGuess(e)
+            }>
                 <label htmlFor="userGuess">Enter your Guess</label>
                 <input type="text" name="userGuess" id="userGuess"
                     className="text" maxLength="3" autoComplete="off"
@@ -28,7 +28,8 @@ export class GuessForm extends React.Component {
 };
 
 const mapStateToProps = state => ({
-    //feedback: state.feedback
+    guesses: state.guesses,
+    feedback: state.feedback
 })
 
 export default connect(mapStateToProps)(GuessForm);

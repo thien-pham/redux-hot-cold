@@ -19,6 +19,7 @@ export const reducer = (state = initialState, action) => {
     let feedback;
     if (difference >= 50) {
       feedback = "You're Ice Cold...";
+			action.guess='';
     } else if (difference >= 30) {
       feedback = "You're Cold...";
     } else if (difference >= 10) {

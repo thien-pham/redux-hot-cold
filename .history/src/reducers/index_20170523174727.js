@@ -17,8 +17,10 @@ export const reducer = (state = initialState, action) => {
   } else if (action.type === NEW_GUESS) {
     const difference = Math.abs(action.guess - state.correctAnswer);
     let feedback;
+
     if (difference >= 50) {
       feedback = "You're Ice Cold...";
+			state.guesses='';
     } else if (difference >= 30) {
       feedback = "You're Cold...";
     } else if (difference >= 10) {

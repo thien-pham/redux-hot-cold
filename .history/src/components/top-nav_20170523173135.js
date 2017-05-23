@@ -5,7 +5,7 @@ import './top-nav.css';
 
 export class TopNav extends React.Component {
     onNewGame(event) {
-        event.preventDefault();
+        //event.preventDefault();
         this.props.dispatch(newGame());
     }
 
@@ -35,6 +35,7 @@ export class TopNav extends React.Component {
 };
 
 const mapStateToProps = state => ({
+    correctAnswer: state.correctAnswer,
     showInfoModal: state.showInfoModal
 });
 
