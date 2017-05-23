@@ -1,11 +1,11 @@
 import React from 'react';
-
 import Header from './header';
 import GuessSection from './guess-section';
 import GuessCount  from './guess-count';
 import GuessList from './guess-list';
+import {connect} from 'react-redux';
 
-export default class Game extends React.Component {
+export class Game extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -70,3 +70,9 @@ export default class Game extends React.Component {
     }
 }
 
+const mapStateToProps = state => ({
+    guesses: state.guesses,
+    feedback: state.feedback
+})
+
+export default connect(mapStateToProps)(Game);
